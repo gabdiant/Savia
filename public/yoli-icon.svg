@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF8FD"/>
+      <stop offset="50%" stop-color="#FCE7F3"/>
+      <stop offset="100%" stop-color="#FED7AA"/>
+    </linearGradient>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ED64A6"/>
+      <stop offset="100%" stop-color="#F6AD55"/>
+    </linearGradient>
+    <linearGradient id="lilacGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9F7AEA"/>
+      <stop offset="100%" stop-color="#ED64A6"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="#ED64A6" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="128" fill="url(#bgGrad)"/>
+  
+  <!-- Central Emblem / Lotus Lotus Petals -->
+  <g transform="translate(256, 230) scale(1.15)" filter="url(#shadow)">
+    <!-- Outer lotus petal left -->
+    <path d="M-80,40 C-110,-20 -50,-90 0,-130 C-30,-60 -50,10 -80,40 Z" fill="url(#lilacGrad)" opacity="0.8"/>
+    <!-- Outer lotus petal right -->
+    <path d="M80,40 C110,-20 50,-90 0,-130 C30,-60 50,10 80,40 Z" fill="url(#brandGrad)" opacity="0.8"/>
+    <!-- Central lotus petal -->
+    <path d="M0,45 C-50,-10 -40,-100 0,-145 C40,-100 50,-10 0,45 Z" fill="url(#brandGrad)"/>
+    <!-- Base petal cradle -->
+    <ellipse cx="0" cy="50" rx="90" ry="24" fill="url(#lilacGrad)" opacity="0.9"/>
+    <!-- Sparkle core -->
+    <circle cx="0" cy="-30" r="14" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Wordmark 'yoli' -->
+  <text x="256" y="420" font-family="'Quicksand', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="700" font-size="82" fill="#ED64A6" text-anchor="middle" letter-spacing="-2px">
+    yoli
+  </text>
+  <circle cx="340" cy="358" r="7" fill="#F6AD55"/>
+</svg>

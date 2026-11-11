@@ -1,0 +1,6 @@
+{
+  "name": "Savia | Terapias Alternativas & Bienestar Holístico",
+  "description": "Plataforma para encontrar terapeutas alternativos certificados según tus necesidades físicas y emocionales: acupuntura, reiki, sonoterapia, naturopatía y más.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

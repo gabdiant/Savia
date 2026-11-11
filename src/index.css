@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-brand {
+    font-family: 'Quicksand', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Hide scrollbar for clean horizontal carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom soft drop shadows matching the clay/soft pill buttons */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(186, 150, 217, 0.25);
+}
+
+.shadow-glow-pink {
+  box-shadow: 0 8px 24px -4px rgba(237, 100, 166, 0.35);
+}
+
+.shadow-glow-orange {
+  box-shadow: 0 8px 24px -4px rgba(246, 173, 85, 0.4);
+}
+
+/* Native View Transitions API Styling (Silky smooth screen crossfade) */
+#yoli-phone-container {
+  view-transition-name: yoli-app-screen;
+}
+
+::view-transition-old(root),
+::view-transition-new(root),
+::view-transition-old(yoli-app-screen),
+::view-transition-new(yoli-app-screen) {
+  animation-duration: 200ms;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root),
+::view-transition-old(yoli-app-screen) {
+  animation-name: yoli-screen-fade-out;
+}
+
+::view-transition-new(root),
+::view-transition-new(yoli-app-screen) {
+  animation-name: yoli-screen-fade-in;
+}
+
+@keyframes yoli-screen-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes yoli-screen-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
